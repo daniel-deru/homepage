@@ -1,18 +1,57 @@
+html {
+    overflow-x: hidden;
+}
 header {
     display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    height: 8.4vh;
+}
+
+header h1 {
+    height: 100%;
+    margin: 10px;
+    color: white;
 }
 
 header nav ul {
     list-style-type: none;
     
 }
- a {
-    color: orange;
-    
-    
+a {
+    text-decoration: none;
 }
 
 a:hover {
-    color: blue;
     text-decoration: none;
+}
+
+i {
+    color: white;
+    font-size: 2em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    nav ul {
+        position: absolute;
+        background-color: hsl(39, 100%, 80%);
+        height: calc(100vh - 8.4vh);
+        padding: 20px;
+        font-size: 2em;
+        right: -200px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .show {
+        position: absolute;
+        user-select: none;
+        background-color: hsl(39, 100%, 80%);
+        padding: 20px;
+        font-size: 2em;
+        right: 0;
+        height: calc(100vh - 8.4vh);
+        transition: 0.5s ease-in-out;
+    }
 }
