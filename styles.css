@@ -1,23 +1,38 @@
 html {
     overflow-x: hidden;
+    padding: none;
+    margin: none;
+    box-sizing: content-box;
 }
 header {
     display: flex;
     justify-content: space-between;
     background-color: orange;
-    height: 8.4vh;
+    height: 10vh;
+    text-align: center;
 }
 
 header h1 {
-    height: 100%;
-    margin: 10px;
+    margin-left: 10px;
     color: white;
+    line-height: 10vh;
 }
 
 header nav ul {
     list-style-type: none;
-    
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vw;
+    line-height: 10vh;
+    font-size: 1.5em;
+
 }
+
+header nav ul li:hover {
+    color: white;
+}
+
+
 a {
     text-decoration: none;
 }
@@ -26,32 +41,125 @@ a:hover {
     text-decoration: none;
 }
 
-i {
+
+
+i.fab {
     color: white;
-    font-size: 2em;
-    padding: 0.5em;
-    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+section {
+    text-align: center;
+}
+
+section h2 {
+    padding: 25px;
+}
+
+em {
+    color: orange;
+}
+
+#social-icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+#social-icon-container li{
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+}
+
+#intro {
+    
+    height: 40vh;
+}
+#social{
+    height: 40vh;
+    padding-top: 70px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+footer {
+    height: 10vh;
+    background-color: rgb(54, 54, 54);
+    text-align: center;
+    color: orange;
+    margin: auto;
+}
+
+footer span {
+    line-height: 10vh;
+}
+i.fa-bars {
+    display: none;
+}
+
+@media (max-width: 900px){
+    header nav ul {
+        font-size: 1em;
+    }
 }
 
 @media (max-width: 600px){
-    nav ul {
-        position: absolute;
-        background-color: hsl(39, 100%, 80%);
-        height: calc(100vh - 8.4vh);
-        padding: 20px;
+
+    header ul li:hover {
+        background-color: white;
+    }
+    i.fa-bars {
+        display: block;
+        color: white;
         font-size: 2em;
-        right: -200px;
+        cursor: pointer;
+        height: 10vh;
+        padding: 2.5vh;
+    }
+
+    header nav ul {
+        position: absolute;
+        display: block;
+        background-color: hsl(39, 100%, 80%);
+        height: 90vh;
+        padding: 0;
+        font-size: 2em;
+        right: -100%;
         transition: 0.5s ease-in-out;
+    }
+
+    nav ul li {
+        padding: 15px 40px;
     }
 
     .show {
         position: absolute;
+        display: block;
         user-select: none;
         background-color: hsl(39, 100%, 80%);
-        padding: 20px;
         font-size: 2em;
         right: 0;
-        height: calc(100vh - 8.4vh);
+        height: 90vh;
         transition: 0.5s ease-in-out;
     }
+}
+
+img {
+    height: 40vh;
+    padding: 5vh;
+}
+
+section {
+    margin: auto;
+    height: 40vh;
+    font-size: 1.2em;
+    max-width: 650px;
+    padding: 20px;
+    text-align: center;
 }
